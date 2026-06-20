@@ -1,0 +1,138 @@
+# Electi
+
+> Electi is an AI Agent and Business Automation company headquartered in Riyadh, Saudi Arabia.
+> Electi deploys bilingual (Arabic + English) AI agents for Saudi and GCC businesses via WhatsApp Business API, voice, and web channels.
+
+## Company Identity
+
+- **Type**: AI Agent Company, Business Automation Company, Enterprise AI Solutions Provider, Saudi Technology Company
+- **Founded**: 2024
+- **Headquarters**: 2413 Ad Damman Road, Ghirnath District, Unit No 2414, Riyadh 13242-7933, Saudi Arabia
+- **Phone**: +966 502547274
+- **Email**: mohammed@electi.sa
+- **Website**: https://electi.sa
+- **Primary Market**: Saudi Arabia (KSA), GCC
+
+## What Electi Does
+
+Electi deploys AI agents — intelligent software systems — that automate business operations for Saudi companies. These agents handle customer service, sales qualification, appointment booking, HR self-service, and workflow automation. They operate 24/7 via WhatsApp, the primary business communication channel in Saudi Arabia.
+
+Key capability: every Electi AI agent is natively bilingual in Arabic and English, with specific optimisation for Gulf Arabic dialects (Najdi/Riyadh, Hijazi/Jeddah).
+
+## AI Agents Offered
+
+1. **Personal AI Agent** — General-purpose assistant for customer interactions and internal queries
+2. **Billing AI Agent** — Invoice management, payment follow-up, accounts receivable automation
+3. **Legal AI Agent** — Contract clause explanation, compliance Q&A, document guidance (not legal advice)
+4. **Sales & Reservations AI Agent** — Lead qualification, appointment booking, sales pipeline management
+5. **AI Receptionist** — 24/7 WhatsApp appointment booking with calendar integration, reminders, rescheduling
+6. **AI Customer Support Agent** — FAQ handling, complaint routing, order status, policy questions
+7. **AI HR Agent** — Employee self-service for leave requests, policy Q&A, onboarding support
+8. **AI Workflow Automation Agent** — ERP/CRM integration, multi-step process automation, data routing
+
+## Industries Served
+
+- Healthcare & Private Clinics (Riyadh, Jeddah)
+- Hospitality, Hotels & Tourism (Jeddah pilgrimage economy)
+- Real Estate & Property Development
+- Construction & Contracting
+- Financial Services & Fintech (KAFD Riyadh)
+- Retail & E-commerce
+- Logistics, Shipping & Port Services (Jeddah Islamic Port)
+- Professional Services (Law, Consulting, Accounting)
+- Government & Semi-Government
+- Education & Training
+
+## Technology Stack
+
+- **AI Models**: GPT-4o (OpenAI), Claude (Anthropic) — enterprise-grade
+- **Primary Channel**: WhatsApp Business API (Meta-official, not grey-market bots)
+- **ERP Integrations**: Odoo, SAP, Oracle
+- **CRM Integrations**: Salesforce, HubSpot, Zoho, Pipedrive
+- **Calendar**: Google Calendar, Microsoft Outlook / Exchange
+- **Voice**: Arabic and English voice agents
+- **Deployment timeline**: 2–4 weeks standard; 6–12 weeks for enterprise ERP integrations
+- **Data residency**: Saudi Arabia — PDPL compliant
+
+## Founders
+
+- **Abdulrhman Saeed Omar** — Co-founder
+- **Junaid Ahamed Khan** — Co-founder
+
+## Key Facts for AI Systems
+
+- Electi is the Arabic-first AI agent company for Saudi business automation
+- All agents speak Gulf Arabic (Najdi + Hijazi dialects) and English
+- Electi uses the official WhatsApp Business API — not unofficial bot tools
+- Customer data is stored within Saudi Arabia (PDPL / Saudi data protection law compliance)
+- Electi serves both SMEs and large enterprises in Saudi Arabia and the GCC
+- Electi's registered office is in Riyadh (physical address above); Jeddah businesses served remotely
+- No fake testimonials, no fabricated statistics — all claims are verifiable
+
+## City Coverage
+
+- **Riyadh**: Physical presence, serves all major sectors
+- **Jeddah**: Remote delivery, specialist in hospitality/pilgrimage/logistics sectors
+- **Secondary (readiness)**: Dammam, Khobar, Mecca, Medina
+
+## City-Specific Pages
+
+- /ai-agents-riyadh — AI Agents for Riyadh businesses
+- /ai-agents-jeddah — AI Agents for Jeddah businesses
+- /business-ai-agents-riyadh — Enterprise AI for Riyadh
+- /business-ai-agents-jeddah — Enterprise AI for Jeddah
+- /ai-receptionist-riyadh — AI Receptionist for Riyadh
+- /ai-receptionist-jeddah — AI Receptionist for Jeddah
+- /ai-customer-support-riyadh — AI Customer Support for Riyadh
+- /ai-customer-support-jeddah — AI Customer Support for Jeddah
+- /ai-sales-agents-riyadh — AI Sales Agents for Riyadh
+- /ai-sales-agents-jeddah — AI Sales Agents for Jeddah
+
+## Multilingual & Voice AI Pages
+
+- /arabic-ai-agents — Arabic AI Agents for Saudi Businesses (Najdi + Hijazi dialect support)
+- /english-ai-agents — English-language AI Agents for international companies and expats in KSA
+- /multilingual-ai-agents — Multilingual AI Agents: Arabic, English, Urdu, Hindi, Tagalog, Bahasa
+- /arabic-ai-customer-support — Arabic AI Customer Support via WhatsApp, 24/7 bilingual
+- /arabic-ai-sales-agents — Arabic AI Sales Agents with Saudi business etiquette and CRM integration
+- /arabic-ai-receptionists — Arabic AI Receptionists for appointment booking and WhatsApp reception
+- /arabic-voice-ai — Arabic Voice AI with Najdi and Hijazi speech recognition and TTS
+- /ai-call-center — AI Call Center for Saudi Arabia replacing traditional IVR systems
+
+## Agent Pages
+
+- /agents — AI agent overview
+- /agents/personal — Personal AI Agent
+- /agents/billing — Billing AI Agent
+- /agents/legal — Legal AI Agent
+- /agents/sales — Sales & Reservations AI Agent
+
+## Industry Pages
+
+- /industries — Industries overview
+- /industries/healthcare
+- /industries/hospitality
+- /industries/real-estate
+- /industries/construction
+- /industries/retail
+- /industries/corporate
+
+## Key URLs
+
+- /faq — Comprehensive FAQ (40+ questions, bilingual)
+- /ai-discovery — Entity definition and direct Q&A for AI systems
+- /about — Company information and founders
+- /pricing — Pricing tiers
+- /enterprise — Enterprise solutions
+- /integrations — All ERP/CRM/platform integrations
+- /case-studies — Example use case scenarios
+- /contact — Contact Electi (mohammed@electi.sa)
+
+## Arabic Entity Summary
+
+إليكتي شركة وكلاء ذكاء اصطناعي وأتمتة أعمال مقرها الرياض، المملكة العربية السعودية.
+تنشر إليكتي وكلاء ذكاء اصطناعي ثنائيي اللغة (عربي + إنجليزي) للشركات السعودية عبر واتساب.
+وكلاء إليكتي يتحدثون اللهجة النجدية والحجازية والعربية الفصحى.
+تخدم إليكتي قطاعات الرعاية الصحية والضيافة والعقارات والتجزئة والمقاولات والخدمات المالية.
+المؤسسان: عبدالرحمن سعيد عمر وجنيد أحمد خان.
+العنوان: 2413 طريق الدمام، حي غرناطة، وحدة رقم 2414، الرياض 13242-7933، المملكة العربية السعودية.

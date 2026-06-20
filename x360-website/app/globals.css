@@ -1,0 +1,359 @@
+@import "tailwindcss";
+
+/* ─────────────────────────────────────────
+   BASE
+───────────────────────────────────────── */
+/* ── Autofill override — keep dark background on browser-filled inputs ── */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px #000000 inset !important;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.85) !important;
+  caret-color: rgba(255, 255, 255, 0.85);
+  transition: background-color 9999s ease-in-out 0s;
+}
+
+@layer base {
+  :root {
+    --gold: #D4AF37;
+    --cyan: #06b6d4;
+    --bg: #050505;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; transition: direction 0.15s ease; cursor: none; }
+
+  body {
+    background-color: #050505;
+    color: #ffffff;
+    font-family: var(--font-quicksand), "Quicksand", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    cursor: none;
+  }
+
+  @media (hover: none), (pointer: coarse) {
+    html, body { cursor: auto; }
+  }
+
+  /* ── RTL Arabic ── */
+  :lang(ar), [dir="rtl"] {
+    font-family: var(--font-cairo), var(--font-quicksand), "Segoe UI", sans-serif;
+    letter-spacing: 0 !important;
+    word-spacing: 0.04em;
+    line-height: 1.75;
+  }
+  :lang(en) { font-family: var(--font-quicksand), "Quicksand", sans-serif; }
+  [dir="rtl"] h1, [dir="rtl"] h2 { font-size: calc(1em * 1.02); }
+  [dir="rtl"] [class*="tracking-"] { letter-spacing: 0 !important; }
+
+  p { letter-spacing: 0.05em; }
+
+  /* Global heading style — Quicksand thin with open tracking */
+  h1, h2, h3, h4 {
+    font-family: var(--font-quicksand), "Quicksand", sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+  }
+
+  /* Arabic headings — reset tracking (Cairo doesn't suit wide spacing) */
+  [dir="rtl"] h1, [dir="rtl"] h2, [dir="rtl"] h3, [dir="rtl"] h4 {
+    letter-spacing: 0 !important;
+    font-weight: 400;
+  }
+}
+
+/* ─────────────────────────────────────────
+   KEYFRAMES
+───────────────────────────────────────── */
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33%  { transform: translateY(-14px) rotate(0.5deg); }
+  66%  { transform: translateY(-7px) rotate(-0.3deg); }
+}
+
+@keyframes float-medium {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-10px); }
+}
+
+@keyframes pulse-border {
+  0%, 100% { border-color: rgba(255,255,255,0.12); box-shadow: 0 0 0 0 rgba(255,255,255,0); }
+  50%       { border-color: rgba(255,255,255,0.25); box-shadow: 0 0 18px rgba(255,255,255,0.06); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.3; }
+  50%       { opacity: 0.9; }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+
+@keyframes gradient-shift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes scan-line {
+  0%   { transform: translateY(-100%); opacity: 0; }
+  10%  { opacity: 1; }
+  90%  { opacity: 1; }
+  100% { transform: translateY(500%); opacity: 0; }
+}
+
+@keyframes blink-cursor {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+@keyframes count-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-up-kf {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scale-in-kf {
+  from { opacity: 0; transform: scale(0.92); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* ─────────────────────────────────────────
+   UTILITIES
+───────────────────────────────────────── */
+
+@layer utilities {
+
+  /* ── Typography ── */
+  .gradient-text {
+    background: linear-gradient(135deg, #ffffff 0%, #7a7a7a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .shimmer-text {
+    background: linear-gradient(90deg,
+      rgba(255,255,255,0.4) 0%,
+      rgba(255,255,255,1)   40%,
+      rgba(255,255,255,0.4) 60%,
+      rgba(255,255,255,1)  100%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 4s linear infinite;
+  }
+
+  /* ── X360 brand gradients (gold / cyan) ── */
+  .gradient-gold {
+    background: linear-gradient(135deg, #D4AF37 0%, #f0d060 50%, #D4AF37 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gradient-cyan {
+    background: linear-gradient(135deg, #06b6d4 0%, #67e8f9 50%, #06b6d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* ── Glows ── */
+  .glow-white  { box-shadow: 0 0 30px rgba(255,255,255,0.12), 0 0 80px rgba(255,255,255,0.04); }
+  .glow-gold   { box-shadow: 0 0 30px rgba(212,175,55,0.3), 0 0 60px rgba(212,175,55,0.1); }
+  .glow-cyan   { box-shadow: 0 0 30px rgba(6,182,212,0.3), 0 0 60px rgba(6,182,212,0.1); }
+
+  /* ── X360 brand helpers ── */
+  .text-gold   { color: #D4AF37; }
+  .text-cyan   { color: #06b6d4; }
+  .bg-gold     { background-color: #D4AF37; }
+  .bg-cyan     { background-color: #06b6d4; }
+  .border-gold { border-color: #D4AF37; }
+  .border-cyan { border-color: #06b6d4; }
+
+  /* ── Glassmorphism tiers (matching Electi system) ── */
+  .glass {
+    background: rgba(255,255,255,0.03);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.07);
+  }
+
+  .glass-light {
+    background: rgba(255,255,255,0.055);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .glass-heavy {
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border: 1px solid rgba(255,255,255,0.12);
+  }
+
+  .glass-gold {
+    background: rgba(212,175,55,0.06);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(212,175,55,0.15);
+  }
+
+  .glass-cyan {
+    background: rgba(6,182,212,0.06);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(6,182,212,0.15);
+  }
+
+  /* ── Animated border ── */
+  .neon-border-anim { animation: pulse-border 3.5s ease-in-out infinite; }
+
+  /* ── Surface textures ── */
+  .dot-grid {
+    background-image: radial-gradient(rgba(255,255,255,0.07) 1px, transparent 1px);
+    background-size: 30px 30px;
+  }
+  .dot-grid-sm {
+    background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+  .grid-lines {
+    background-image:
+      linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+  .grid-lines-gold {
+    background-image:
+      linear-gradient(rgba(212,175,55,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(212,175,55,0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+  .grid-lines-cyan {
+    background-image:
+      linear-gradient(rgba(6,182,212,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(6,182,212,0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  /* ── Scan line ── */
+  .scan-anim { animation: scan-line 3s ease-in-out infinite; }
+
+  /* ── Float animations ── */
+  .animate-float      { animation: float-medium 4s ease-in-out infinite; }
+  .animate-float-slow { animation: float-slow 7s ease-in-out infinite; }
+
+  /* ── Pulse glow ── */
+  .animate-pulse-glow { animation: pulse-glow 2.5s ease-in-out infinite; }
+
+  /* ── Shimmer surface ── */
+  .shimmer-surface {
+    background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.04) 50%, transparent 100%);
+    background-size: 200% 100%;
+    animation: shimmer 3s linear infinite;
+  }
+
+  /* ── Marquee ── */
+  .animate-marquee {
+    display: flex;
+    animation: marquee 30s linear infinite;
+  }
+
+  /* ── Marquee outer wrapper: always LTR so inline-flex starts at left edge ── */
+  .marquee-outer {
+    direction: ltr;
+  }
+
+  /* ── Blink cursor ── */
+  .blink { animation: blink-cursor 1.1s step-end infinite; }
+
+  /* ── Reveal animations ── */
+  .fade-up  { animation: fade-up-kf 0.7s cubic-bezier(0.22, 1, 0.36, 1) both; }
+  .scale-in { animation: scale-in-kf 0.5s cubic-bezier(0.22, 1, 0.36, 1) both; }
+
+  /* ── Font helpers ── */
+  .font-cairo     { font-family: var(--font-cairo), "Cairo", sans-serif; }
+  .font-quicksand { font-family: var(--font-quicksand), "Quicksand", sans-serif; }
+
+  /* ── Numeric font-weight aliases (non-standard in Tailwind; defined here) ── */
+  .font-300 { font-weight: 300; }
+  .font-400 { font-weight: 400; }
+  .font-500 { font-weight: 500; }
+  .font-600 { font-weight: 600; }
+  .font-700 { font-weight: 700; }
+  .font-800 { font-weight: 800; }
+
+  /* ── Scrollbar ── */
+  ::-webkit-scrollbar       { width: 5px; }
+  ::-webkit-scrollbar-track { background: #050505; }
+  ::-webkit-scrollbar-thumb { background: rgba(212,175,55,0.3); border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: rgba(212,175,55,0.5); }
+
+  ::selection { background: rgba(212,175,55,0.25); color: #ffffff; }
+}
+
+/* ─────────────────────────────────────────
+   CURSOR — restore default on touch/coarse-pointer devices
+   The root layout applies cursor-none for the custom cursor effect,
+   but that must not apply on phones/tablets where there is no pointer.
+───────────────────────────────────────── */
+@media (pointer: coarse) {
+  *, *::before, *::after { cursor: auto !important; }
+}
+
+/* ─────────────────────────────────────────
+   REDUCED MOTION — respect user's accessibility preference
+───────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Keep opacity transitions slightly longer so content doesn't flash */
+  .fade-up, .scale-in {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* ─────────────────────────────────────────
+   MOBILE SNAP SCROLL
+   Sections snap to viewport on small screens.
+   Pages that manage their own scroll container (about, dev subpages)
+   are unaffected — their sections bind to the inner container, not here.
+───────────────────────────────────────── */
+@media (max-width: 1023px) {
+  section {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+}
